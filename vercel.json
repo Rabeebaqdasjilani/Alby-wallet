@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "alby-wallet",
+    "builds": [
+       { "src": "./src/server/server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "./src/server/server.js" }
+    ]
+ }
