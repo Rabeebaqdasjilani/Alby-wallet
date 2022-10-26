@@ -6,7 +6,7 @@ const assert = require("assert");
 const crypto = require("crypto");
 const lnurl = require("lnurl");
 const qrcode = require("qrcode");
-
+require("dotenv").config()
 const map = {
   user: new Map(),
   session: new Map(),
@@ -119,7 +119,7 @@ function setupAuth(app) {
 
   app.get("/me", function (req, res, next) {
     res.json({ user: req.user ? req.user : null });
-
+  
     next();
   });
 
